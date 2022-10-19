@@ -71,10 +71,6 @@ int main(){
             return 0;
         }
     }
-
-    //Fill distance array in reverse topological order
-    //i.e distance of u should be determined wrt
-    //distance of children v
     for(auto u: topo){
         for(auto v: adj[u]){
             res[u]=max(res[u], res[v]+1);
